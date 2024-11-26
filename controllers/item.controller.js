@@ -657,6 +657,33 @@ const getPayments = function (req, res) {
     }
   });
 };
+
+const getClassesPayment = function(req,res){
+  const { groupnumber } = req.params
+
+  const query = `
+SELECT 
+    p.*,
+    s.nom,
+    s.prenom
+FROM 
+    public.payment p
+JOIN 
+    public.student s
+ON 
+    p.student_id = s.id
+WHERE 
+    p.groupnumber = $1;
+
+  `;
+  db.query(query, [groupnumber],(err,result)=>{
+    if (err){
+      console.error(err)
+    }else{
+      res.json(result.rows);
+    }
+  })
+}
 const getPaymentsstudent = function (req, res) {
   const { student_id } = req.params; // Assuming student_id is passed as a URL parameter
 
@@ -730,5 +757,6 @@ module.exports = {
   getStudentDetailsByTeacher,
   addPreviousClass,
   deleteClasseStd,
-  ClassesAllList
+  ClassesAllList,
+  getClassesPayment
 };
