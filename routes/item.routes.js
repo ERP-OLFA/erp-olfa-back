@@ -24,7 +24,7 @@ router.get("/getStudentbyId/:id", itemController.getStudentbyId);
 router.put("/UpdatePaymentAmount/:id", itemController.UpdatePaymentAmount);
 router.get("/archivedpresence/:student_id", itemController.archivedpresence);
 router.get("/getPaymentsstudent/:student_id", itemController.getPaymentsstudent);
-router.get("/getClassesPayment/:groupnumber", itemController.getPaymentsstudent);
+router.get("/getClassesPayment/:groupnumber", itemController.getClassesPayment);
 router.delete("/deleteClasseStd/:id", itemController.deleteClasseStd);
 router.get("/getPayments", itemController.getPayments);
 router.put("/updateClassMonth/:id", itemController.updateClassMonth);
