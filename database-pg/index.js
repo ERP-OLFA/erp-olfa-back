@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 
-const connectionString = 'postgresql://erp_olfa_user:QBDKLOSgofnexVl14WLmaZJFriJiLqTw@dpg-cskasn8gph6c73a8elqg-a.oregon-postgres.render.com/erp_olfa';
+const connectionString = 'postgresql://erp_olfa_72ve_user:VgXjllm9XqxVBL7zFjtmNc17t6Crzc4k@dpg-ct85bn68ii6s73ccvhjg-a.oregon-postgres.render.com/erp_olfa_72ve';
 
 const client = new Client({
   connectionString: connectionString,
