@@ -1,11 +1,12 @@
 const { Client } = require('pg');
 
-const connectionString = 'postgresql://erp_olfa_72ve_user:VgXjllm9XqxVBL7zFjtmNc17t6Crzc4k@dpg-ct85bn68ii6s73ccvhjg-a.oregon-postgres.render.com/erp_olfa_72ve';
+// New connection string with updated credentials
+const connectionString = 'postgresql://erp_olfa_databsv1_2_user:8hz75BufABPbPdfLjlWt5GG8LsqOfDdy@dpg-cts07mjtq21c73946p50-a.oregon-postgres.render.com/erp_olfa_databsv1_2';
 
 const client = new Client({
   connectionString: connectionString,
   ssl: {
-    rejectUnauthorized: false, // Adjust based on your security requirements
+    rejectUnauthorized: false,
   },
 });
 
